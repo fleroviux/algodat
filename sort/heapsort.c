@@ -5,31 +5,31 @@ static void swap(int* a, int* b) {
     *b = tmp;
 }
 
-static void heapify(int* a, int len, int i) {
+static void heapify(int* arr, int len, int i) {
     int l = i*2+1;
     int r = i*2+2;
     
-    if (l < len && a[l] > a[i]) {
-        swap(&a[l], &a[i]);    
-        heapify(a, len, l);    
+    if (l < len && arr[l] > arr[i]) {
+        swap(&arr[l], &arr[i]);    
+        heapify(arr, len, l);    
     }
 
-    if (r < len && a[r] > a[i]) {
-        swap(&a[r], &a[i]);
-        heapify(a, len, r);
+    if (r < len && arr[r] > arr[i]) {
+        swap(&arr[r], &arr[i]);
+        heapify(arr, len, r);
     }
 }
 
-static void build(int* a, int len) {
+static void build(int* arr, int len) {
     for (int i = len/2-1; i >= 0; i--) {
-        heapify(a, len, i);
+        heapify(arr, len, i);
     }     
 }
 
-void heapsort(int* a, int len) {
-    build(a, len);
+void heapsort(int* arr, int len) {
+    build(arr, len);
     while (len > 0) {
-        swap(&a[0], &a[--len]);
-        heapify(a, len, 0);
+        swap(&arr[0], &arr[--len]);
+        heapify(arr, len, 0);
     }   
 }
