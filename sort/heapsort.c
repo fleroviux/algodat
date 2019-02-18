@@ -1,4 +1,12 @@
 
+/**
+ * Heapsort sorting algorithm.
+ * Basically an optimization of selection sort
+ * where the next largest number can be found in log(n) steps.
+ * Time complexity: O(n log n)
+ * Space complexity: O(1)
+ */
+
 static void swap(int* a, int* b) {
     int tmp = *a;
     *a = *b;
