@@ -12,7 +12,6 @@ double my_sqrt(double n) {
 	/* The square root of a negative real would be imaginary, thus cannot be represented as a single double. */
 	if (n < 0) return NAN;
 	
-	/* As sqrt(n) <= n/2 holds true n/2 is a good first estimate. */
 	double x = n*0.5;
 	double square = x * x;
 	double error = square - n;
