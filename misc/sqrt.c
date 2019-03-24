@@ -9,12 +9,15 @@
  * Following the tangent we can then get a better estimation in each iteration.
  */
 double my_sqrt(double n) {
+	/* The square root of a negative real would be imaginary, thus cannot be represented as a single double. */
 	if (n < 0) return NAN;
 	
+	/* As sqrt(n) <= n/2 holds true n/2 is a good first estimate. */
 	double x = n*0.5;
 	double square = x * x;
 	double error = square - n;
 
+	/* Iterate as long as the error is larger than desired. */
 	do {
 		x = x - error/(2.0*x);
 		square = x*x;
