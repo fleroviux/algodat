@@ -6,3 +6,5 @@ In this repository I intend to keep copies of algorithms or data structures I im
 ## Misc.
 - Integer Log2(x)
 - Count Leading Zeros (CLZ)
+- Square root based on Newton-Raphson method
+- sin(x) implementation based on a Taylor polynomial.
