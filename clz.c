@@ -5,6 +5,7 @@
  * Time complexity: O(log n) where n is number of bits.
  */
 int fast_clz(uint32_t x) {
+    if (x == 0) return 32;
     int result = 0;
     uint32_t m[] = { 
         0xFFFF0000,
